@@ -9544,8 +9544,6 @@ Discarded input sections
  .bss           0x00000000        0x0 /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_udivmodhi4.o)
  .text.libgcc.mul
                 0x00000000        0x0 /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_udivmodhi4.o)
- .text.libgcc.div
-                0x00000000       0x28 /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_udivmodhi4.o)
  .text.libgcc   0x00000000        0x0 /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_udivmodhi4.o)
  .text.libgcc.prologue
                 0x00000000        0x0 /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_udivmodhi4.o)
@@ -9560,8 +9558,6 @@ Discarded input sections
  .bss           0x00000000        0x0 /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_divmodhi4.o)
  .text.libgcc.mul
                 0x00000000        0x0 /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_divmodhi4.o)
- .text.libgcc.div
-                0x00000000       0x28 /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_divmodhi4.o)
  .text.libgcc   0x00000000        0x0 /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_divmodhi4.o)
  .text.libgcc.prologue
                 0x00000000        0x0 /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_divmodhi4.o)
@@ -9981,7 +9977,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x1df8
+.text           0x00000000     0x1e86
  *(.vectors)
  .vectors       0x00000000       0xa4 /opt/microchip/mplabx/v6.15/packs/Microchip/AVR-Dx_DFP/2.3.272/gcc/dev/avr128da28/avrxmega4/crtavr128da28.o
                 0x00000000                __vector_default
@@ -10287,22 +10283,29 @@ END GROUP
  .text.u8x8_avr_delay
                 0x00001c5a       0x7a build/default/production/_ext/1901844053/u8x8_avr.o
                 0x00001c5a                u8x8_avr_delay
- .text.main     0x00001cd4       0xb0 build/default/production/_ext/279706397/main.o
+ .text.main     0x00001cd4       0xee build/default/production/_ext/279706397/main.o
                 0x00001cd4                main
  .text.libgcc.div
-                0x00001d84       0x44 /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_udivmodsi4.o)
-                0x00001d84                __udivmodsi4
+                0x00001dc2       0x28 /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_udivmodhi4.o)
+                0x00001dc2                __udivmodhi4
+ .text.libgcc.div
+                0x00001dea       0x28 /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_divmodhi4.o)
+                0x00001dea                __divmodhi4
+                0x00001dea                _div
+ .text.libgcc.div
+                0x00001e12       0x44 /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_udivmodsi4.o)
+                0x00001e12                __udivmodsi4
  .text.libgcc.mul
-                0x00001dc8       0x1e /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_umulhisi3.o)
-                0x00001dc8                __umulhisi3
+                0x00001e56       0x1e /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_umulhisi3.o)
+                0x00001e56                __umulhisi3
  .text.avr-libc
-                0x00001de6        0xe /usr/lib/gcc/avr/13.2.0/../../../../avr/lib/avrxmega4/libc.a(memset.o)
-                0x00001de6                memset
-                0x00001df4                        . = ALIGN (0x2)
+                0x00001e74        0xe /usr/lib/gcc/avr/13.2.0/../../../../avr/lib/avrxmega4/libc.a(memset.o)
+                0x00001e74                memset
+                0x00001e82                        . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00001df4        0x0 /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_exit.o)
-                0x00001df4                _exit
-                0x00001df4                exit
+ .fini9         0x00001e82        0x0 /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_exit.o)
+                0x00001e82                _exit
+                0x00001e82                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -10321,17 +10324,17 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00001df4        0x4 /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_exit.o)
+ .fini0         0x00001e82        0x4 /usr/lib/gcc/avr/13.2.0/avrxmega4/libgcc.a(_exit.o)
  *(.fini0)
  *(.hightext)
  *(.hightext*)
  *(.progmemx.*)
-                0x00001df8                        . = ALIGN (0x2)
+                0x00001e86                        . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
-                0x00001df8                        _etext = .
+                0x00001e86                        _etext = .
 
-.data           0x00804000       0x7a load address 0x00001df8
+.data           0x00804000       0x7a load address 0x00001e86
                 0x00804000                        PROVIDE (__data_start = .)
  *(.data)
  *(.data*)
@@ -10371,8 +10374,8 @@ END GROUP
                 0x008041fb                u8g2
  *(COMMON)
                 0x00804271                        PROVIDE (__bss_end = .)
-                0x00001df8                        __data_load_start = LOADADDR (.data)
-                0x00001e72                        __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00001e86                        __data_load_start = LOADADDR (.data)
+                0x00001f00                        __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00804271        0x0
                 [!provide]                        PROVIDE (__noinit_start = .)

@@ -147,8 +147,8 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>mainmaybe.c</itemPath>
-      <itemPath>../u8g2-master/sys/avr/avr-libc/atmega328p-hw-i2c/main.c</itemPath>
+      <itemPath>main.c</itemPath>
+      <itemPath>src/twimastertimeout.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -157,9 +157,9 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>../u8g2-master/sys/avr/avr-libc/atmega328p-hw-i2c</Elem>
     <Elem>../u8g2-master/csrc</Elem>
     <Elem>../u8g2-master/sys/avr/avr-libc/lib</Elem>
+    <Elem>src</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -169,7 +169,7 @@
         <targetDevice>AVR128DA28</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>AtmelIceTool</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>AVR</languageToolchain>
         <languageToolchainVersion>1.00</languageToolchainVersion>
         <platform>2</platform>
@@ -204,6 +204,10 @@
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
+      <item path="../u8g2-master/sys/avr/avr-libc/lib/avr-hw-i2c/twimastertimeout.c"
+            ex="true"
+            overriding="false">
+      </item>
       <AVR-AR>
         <property key="archiver-flags" value="-r"/>
       </AVR-AR>
@@ -286,7 +290,7 @@
         <property key="user-pack-device-support" value=""/>
         <property key="user-pack-include" value=""/>
         <property key="usersig" value="false"/>
-        <appendMe value="-DAVR_USE_HW_I2C"/>
+        <appendMe value="-DAVR_USE_HW_I2C -DF_CPU=8000000UL"/>
       </AVR-Global>
       <AVR-LD>
         <property key="eeprom-segment" value=""/>
@@ -400,22 +404,6 @@
                   value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value=""/>
       </Tool>
-      <item path="mainmaybe.c" ex="true" overriding="false">
-        <AVR-AR>
-        </AVR-AR>
-        <AVR-AS>
-        </AVR-AS>
-        <AVR-AS-PRE>
-        </AVR-AS-PRE>
-        <AVR-CPP>
-        </AVR-CPP>
-        <AVR-GCC>
-        </AVR-GCC>
-        <AVR-Global>
-        </AVR-Global>
-        <AVR-LD>
-        </AVR-LD>
-      </item>
     </conf>
   </confs>
 </configurationDescriptor>
